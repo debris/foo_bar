@@ -4,9 +4,10 @@ pub struct Foo;
 mod tests {
 	extern crate bar;
 	use self::bar::get_foo;
+	use super::Foo;
 
     #[test]
     fn it_works() {
-		let _f = get_foo();
+		let _f: Foo = get_foo();
     }
 }
